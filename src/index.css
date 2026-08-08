@@ -1,34 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ==========================================
-   FREE BINGO OPPORTUNITY PLATFORM PALETTE
+   ON.BINGO PREMIUM ENTERPRISE COLOR PALETTE
    ========================================== */
 
 :root {
-  --primary-blue: #2563EB;
-  --accent-green: #00C896;
-  --dark-navy: #0F172A;
-  --light-bg: #F8FAFC;
-  --card-bg: #FFFFFF;
-  --gold: #F4C542;
-  --purple: #7C3AED;
-  --cyan: #3BB6FF;
-  --border: #E2E8F0;
-  --text-primary: #0F172A;
-  --text-secondary: #475467;
-  --text-muted: #94A3B8;
+  --brand-blue: #0535e6;         /* Electric Royal Blue */
+  --brand-blue-deep: #03269c;    /* Deep Royal Navy */
+  --brand-blue-dark: #0b25a0;    /* Torea Bay Blue */
+  --accent-lime: #74db24;        /* Electric Lime Green */
+  --accent-cyan: #00C4FF;        /* Vibrant Cyan */
+  --accent-gold: #fec40f;        /* Supernova Gold */
+  --accent-crimson: #e61713;     /* Crimson Accent */
+  
+  --bg-white: #ffffff;           /* Pure White */
+  --bg-light: #fafafc;           /* Ultra-clean Slate Light Gray */
+  --text-dark: #111827;          /* High contrast deep charcoal */
+  --text-muted: #6b7280;         /* Slate gray body */
+  --border-light: #e5e7eb;       /* Soft crisp border */
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--light-bg);
-  color: var(--text-primary);
+  background-color: #ffffff;
+  color: #111827;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -39,76 +40,62 @@ body {
 .font-mono { font-family: 'JetBrains Mono', monospace !important; }
 
 /* Gradient Utilities */
-.bg-hero-gradient {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #2563EB 100%);
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #03269c 0%, #0535e6 60%, #00C4FF 100%);
 }
 
-.bg-opportunity-gradient {
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #3BB6FF 100%);
+.bg-gradient-blue {
+  background: linear-gradient(180deg, #0535e6 0%, #03269c 100%);
 }
 
-.bg-gold-gradient {
-  background: linear-gradient(135deg, #F4C542 0%, #D4A017 100%);
+.text-gradient-lime {
+  background: linear-gradient(135deg, #74db24 0%, #a0f050 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.bg-emerald-gradient {
-  background: linear-gradient(135deg, #00C896 0%, #059669 100%);
-}
-
-.text-gradient-primary {
-  background: linear-gradient(135deg, #2563EB 0%, #3BB6FF 100%);
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00C4FF 0%, #5BC8FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #F4C542 0%, #FFB703 100%);
+  background: linear-gradient(135deg, #fec40f 0%, #ffd700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-green {
-  background: linear-gradient(135deg, #00C896 0%, #10B981 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Glassmorphism & Elevation */
+.glass-card-dark {
+  background: rgba(3, 38, 156, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Glassmorphism UI */
-.glass-panel-dark {
-  background: rgba(15, 23, 42, 0.85);
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid #e5e7eb;
 }
 
-.glass-panel-light {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid #E2E8F0;
+/* Custom Shadows & Glows */
+.shadow-premium-xl {
+  box-shadow: 0 25px 50px -12px rgba(5, 53, 230, 0.18), 0 0 20px rgba(0, 196, 255, 0.08);
 }
 
-/* Shadows & Glows */
-.shadow-blue-glow {
-  box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.35);
+.shadow-lime-glow {
+  box-shadow: 0 10px 30px -4px rgba(116, 219, 36, 0.45), 0 0 15px rgba(116, 219, 36, 0.2);
 }
 
-.shadow-green-glow {
-  box-shadow: 0 10px 30px -5px rgba(0, 200, 150, 0.35);
+.shadow-cyan-glow {
+  box-shadow: 0 10px 30px -4px rgba(0, 196, 255, 0.45);
 }
 
-.shadow-gold-glow {
-  box-shadow: 0 10px 30px -5px rgba(244, 197, 66, 0.4);
-}
-
-/* Grid 5-columns for Bingo Board */
-.grid-cols-5 {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.aspect-square {
-  aspect-ratio: 1 / 1;
+.shadow-brand-glow {
+  box-shadow: 0 15px 35px -5px rgba(5, 53, 230, 0.35);
 }
 
 /* Custom Scrollbar */
@@ -118,30 +105,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0F172A;
+  background: #fafafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #0535e6;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563EB;
-}
-
-/* Keyframes for animated ticker */
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-ticker {
-  display: flex;
-  width: 200%;
-  animation: ticker 25s linear infinite;
-}
-
-.animate-ticker:hover {
-  animation-play-state: paused;
+  background: #74db24;
 }
