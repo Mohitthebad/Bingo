@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import Canvas3DBackground from "./components/Canvas3DBackground";
 import ToastNotification from "./components/ToastNotification";
 import Navbar from "./components/Navbar";
 import Fold1Hero from "./components/Fold1Hero";
@@ -21,8 +22,11 @@ export default function App() {
   };
 
   return (
-    <div className="font-body bg-white text-[#1f1f40] min-h-screen relative overflow-x-hidden selection:bg-[#74db24] selection:text-[#1f1f40]">
+    <div className="font-body bg-[#F8FAFC] text-[#0F172A] min-h-screen relative overflow-x-hidden selection:bg-[#2563EB] selection:text-white">
       
+      {/* 3D Space Node Canvas Background Layer */}
+      <Canvas3DBackground />
+
       {/* Global Toast Alert */}
       <AnimatePresence>
         {toastMessage && (

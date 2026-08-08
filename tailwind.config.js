@@ -7,18 +7,42 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Space Grotesk', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        display: ['Times New Roman', 'Times', 'Georgia', 'serif'],
+        serif: ['Times New Roman', 'Times', 'Georgia', 'serif'],
+        heading: ['Times New Roman', 'Times', 'Georgia', 'serif'],
+        body: ['Times New Roman', 'Times', 'Georgia', 'serif'],
+        mono: ['JetBrains Mono', 'Times New Roman', 'monospace'],
       },
       colors: {
-        darkBg: '#121218',
-        darkCard: '#1B1C24',
-        lightBg: '#F7F4EC',
-        coral: '#FF3B5C',
-        lime: '#C6FF5E',
+        primary: {
+          DEFAULT: '#2563EB',
+          dark: '#1E3A8A',
+          navy: '#0F172A',
+          blue: '#2563EB',
+        },
+        secondary: {
+          DEFAULT: '#10B981',
+          light: '#34D399',
+        },
+        accent: {
+          DEFAULT: '#EA580C',
+          lime: '#10B981',
+          cyan: '#0284C7',
+          gold: '#D97706',
+        },
+        surface: {
+          DEFAULT: '#F8FAFC',
+          light: '#FFFFFF',
+          card: '#FFFFFF',
+        },
+        border: {
+          DEFAULT: '#E2E8F0',
+          light: '#CBD5E1',
+        }
       }
     },
   },
   plugins: [],
 }
+
+

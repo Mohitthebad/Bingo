@@ -9,6 +9,7 @@ import {
   buttonTap, 
   GPU_ACCELERATION 
 } from "../animations";
+import Card3DTilt from "./Card3DTilt";
 
 export default function Fold8FinalMovementCTA({ onNotify }) {
   const shouldReduceMotion = useReducedMotion();
@@ -31,22 +32,22 @@ export default function Fold8FinalMovementCTA({ onNotify }) {
   };
 
   return (
-    <section id="join" className="py-28 bg-[#0535e6] text-white relative">
+    <section id="join" className="py-28 bg-[#1E3A8A] text-white relative">
       {/* Top Triangular Indicator Notch */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[20px] border-t-white z-20" />
+      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[20px] border-t-[#F8FAFC] z-20" />
 
       <div className="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
         
         <motion.div {...sectionReveal}>
-          <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest bg-white/15 text-[#74db24] border border-white/20 px-4 py-1.5 rounded-full font-bold mb-4">
+          <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest bg-white/15 text-[#10B981] border border-white/20 px-4 py-1.5 rounded-full font-bold mb-4">
             Join The Software Revolution
           </div>
 
           <h2 className="font-display font-black text-4xl sm:text-6xl tracking-tight leading-tight text-white">
             Ready To Stop Paying For <br />
-            <span className="relative inline-block text-[#74db24]">
+            <span className="relative inline-block text-[#10B981]">
               Software Forever?
-              <span className="absolute bottom-1 left-0 w-full h-[4px] bg-[#74db24] rounded-full" />
+              <span className="absolute bottom-1 left-0 w-full h-[4px] bg-[#10B981] rounded-full" />
             </span>
           </h2>
 
@@ -56,48 +57,52 @@ export default function Fold8FinalMovementCTA({ onNotify }) {
         </motion.div>
 
         {submitted ? (
-          <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="p-8 bg-white text-[#111827] rounded-3xl border-l-[6px] border-l-[#74db24] border border-[#e5e7eb] font-display font-bold text-xl max-w-xl mx-auto shadow-premium-xl"
-          >
-            🎉 Welcome to On.Bingo! Your account is active. Check your inbox to launch your workspace!
-          </motion.div>
-        ) : (
-          <motion.form
-            {...sectionReveal}
-            onSubmit={handleSubmit}
-            className="max-w-xl mx-auto flex flex-col sm:flex-row gap-3"
-          >
-            <input
-              type="email"
-              required
-              placeholder="Enter your work email address..."
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white text-[#111827] border border-[#e5e7eb] rounded-2xl px-6 py-4 text-sm placeholder:text-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#74db24] flex-1 shadow-inner"
-            />
-            <motion.button
-              {...buttonTap}
-              style={GPU_ACCELERATION}
-              type="submit"
-              disabled={isSubmitting}
-              className="bg-[#74db24] text-[#111827] font-display font-extrabold px-9 py-4 rounded-2xl text-xs uppercase tracking-wider hover:bg-white hover:text-[#0535e6] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lime-glow whitespace-nowrap border border-[#74db24] disabled:opacity-75"
+          <Card3DTilt className="max-w-xl mx-auto" tiltMax={8}>
+            <motion.div
+              initial={shouldReduceMotion ? {} : { opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              className="p-8 bg-white text-[#0F172A] rounded-3xl border-l-[6px] border-l-[#10B981] border border-[#E2E8F0] font-display font-bold text-xl shadow-2xl preserve-3d"
             >
-              {isSubmitting ? (
-                <>
-                  <Loader2 size={16} className="animate-spin text-[#111827]" />
-                  <span>Activating...</span>
-                </>
-              ) : (
-                <>
-                  <span>Get My Free Business Platform</span>
-                  <Rocket size={16} />
-                </>
-              )}
-            </motion.button>
-          </motion.form>
+              🎉 Welcome to On.Bingo! Your account is active. Check your inbox to launch your workspace!
+            </motion.div>
+          </Card3DTilt>
+        ) : (
+          <Card3DTilt className="max-w-xl mx-auto" tiltMax={8}>
+            <motion.form
+              {...sectionReveal}
+              onSubmit={handleSubmit}
+              className="bg-white/15 p-4 rounded-3xl border border-white/25 backdrop-blur-md flex flex-col sm:flex-row gap-3 shadow-2xl preserve-3d"
+            >
+              <input
+                type="email"
+                required
+                placeholder="Enter your work email address..."
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-white text-[#0F172A] border border-[#E2E8F0] rounded-2xl px-6 py-4 text-sm placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#10B981] flex-1 shadow-inner"
+              />
+              <motion.button
+                {...buttonTap}
+                style={GPU_ACCELERATION}
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-[#10B981] text-white font-display font-extrabold px-9 py-4 rounded-2xl text-xs uppercase tracking-wider hover:bg-white hover:text-[#1E3A8A] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg whitespace-nowrap border border-[#10B981] disabled:opacity-75"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 size={16} className="animate-spin text-white" />
+                    <span>Activating...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Get Free Platform</span>
+                    <Rocket size={16} />
+                  </>
+                )}
+              </motion.button>
+            </motion.form>
+          </Card3DTilt>
         )}
 
         {/* Checkmarks Stagger */}
@@ -118,7 +123,7 @@ export default function Fold8FinalMovementCTA({ onNotify }) {
             "No Credit Card"
           ].map((item) => (
             <motion.span key={item} variants={staggerItem} className="flex items-center gap-1.5 text-white font-semibold">
-              <Check size={14} className="text-[#74db24]" /> {item}
+              <Check size={14} className="text-[#10B981]" /> {item}
             </motion.span>
           ))}
         </motion.div>

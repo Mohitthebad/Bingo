@@ -1,4 +1,4 @@
-import { TRANSITION_PRESETS, DURATIONS, EASINGS } from "./tokens";
+import { TRANSITION_PRESETS } from "./tokens";
 
 /* ---------------------------------------------------------------------- */
 /*  Fade Animation Variants                                               */

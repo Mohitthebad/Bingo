@@ -1,4 +1,4 @@
-import { TRANSITION_PRESETS, DURATIONS, EASINGS } from "./tokens";
+import { DURATIONS, EASINGS } from "./tokens";
 
 /* ---------------------------------------------------------------------- */
 /*  Hero Section Specific Animation Variants                               */

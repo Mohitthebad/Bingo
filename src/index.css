@@ -1,93 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ==========================================
-   ON.BINGO PREMIUM ENTERPRISE COLOR PALETTE
-   ========================================== */
+/* ======================================================
+   UI UX PRO MAX CONTENT-RELEVANT THEME TOKENS
+   (FREE ENTERPRISE OS & CAPITAL SAVINGS PALETTE - BEST TECH PAIRING)
+   ====================================================== */
 
 :root {
-  --brand-blue: #0535e6;         /* Electric Royal Blue */
-  --brand-blue-deep: #03269c;    /* Deep Royal Navy */
-  --brand-blue-dark: #0b25a0;    /* Torea Bay Blue */
-  --accent-lime: #74db24;        /* Electric Lime Green */
-  --accent-cyan: #00C4FF;        /* Vibrant Cyan */
-  --accent-gold: #fec40f;        /* Supernova Gold */
-  --accent-crimson: #e61713;     /* Crimson Accent */
-  
-  --bg-white: #ffffff;           /* Pure White */
-  --bg-light: #fafafc;           /* Ultra-clean Slate Light Gray */
-  --text-dark: #111827;          /* High contrast deep charcoal */
-  --text-muted: #6b7280;         /* Slate gray body */
-  --border-light: #e5e7eb;       /* Soft crisp border */
+  /* Enterprise Light Mode Palette */
+  --color-primary: #2563EB;        /* Royal Sapphire Blue */
+  --color-primary-dark: #1E3A8A;   /* Deep Navy */
+  --color-on-primary: #FFFFFF;     /* White text on primary */
+  --color-secondary: #10B981;      /* Emerald Mint */
+  --color-on-secondary: #FFFFFF;   /* White text on secondary */
+  --color-accent: #EA580C;         /* Vibrant Orange */
+  --color-on-accent: #FFFFFF;      /* White text on accent */
+  --color-background: #F8FAFC;     /* Clean Crisp Light Slate Background */
+  --color-foreground: #0F172A;     /* Deep Charcoal Text */
+  --color-muted: #E2E8F0;          /* Muted Light Slate */
+  --color-muted-foreground: #64748B;/* Soft Slate Text */
+  --color-border: #E2E8F0;         /* Soft Border */
+  --color-destructive: #DC2626;    /* Crimson Red */
+  --color-ring: #2563EB;           /* Focus Ring */
+
+  /* Brand Utility Tokens */
+  --brand-blue: #2563EB;
+  --brand-blue-deep: #1E3A8A;
+  --accent-lime: #10B981;
+  --accent-cyan: #0284C7;
+  --accent-gold: #D97706;
+  --accent-crimson: #DC2626;
+
+  /* Spacing System Tokens */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Shadow Elevation System */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #ffffff;
-  color: #111827;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Typography Utility Classes */
-.font-display { font-family: 'Space Grotesk', sans-serif !important; }
-.font-body { font-family: 'Inter', sans-serif !important; }
-.font-mono { font-family: 'JetBrains Mono', monospace !important; }
 
-/* Gradient Utilities */
+/* Typography Utility Classes (Times New Roman Edition) */
+.font-display { font-family: 'Times New Roman', Times, Georgia, serif !important; }
+.font-heading { font-family: 'Times New Roman', Times, Georgia, serif !important; }
+.font-body { font-family: 'Times New Roman', Times, Georgia, serif !important; }
+.font-serif { font-family: 'Times New Roman', Times, Georgia, serif !important; }
+.font-mono { font-family: 'JetBrains Mono', 'Times New Roman', monospace !important; }
+
+/* Gradient Utilities (Enterprise Light Theme) */
 .bg-gradient-brand {
-  background: linear-gradient(135deg, #03269c 0%, #0535e6 60%, #00C4FF 100%);
+  background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 60%, #3B82F6 100%);
 }
 
 .bg-gradient-blue {
-  background: linear-gradient(180deg, #0535e6 0%, #03269c 100%);
+  background: linear-gradient(180deg, #2563EB 0%, #1E3A8A 100%);
 }
 
 .text-gradient-lime {
-  background: linear-gradient(135deg, #74db24 0%, #a0f050 100%);
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-cyan {
-  background: linear-gradient(135deg, #00C4FF 0%, #5BC8FF 100%);
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #fec40f 0%, #ffd700 100%);
+  background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Glassmorphism & Elevation */
 .glass-card-dark {
-  background: rgba(3, 38, 156, 0.85);
+  background: rgba(30, 58, 138, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .glass-card-light {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid #e5e7eb;
+  border: 1px solid #E2E8F0;
+}
+
+
+/* 21st.dev Style Shimmer Beam Animations & Cards */
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-border-glow {
+  background-size: 200% 200%;
+  animation: borderGlow 4s ease infinite;
+}
+
+.card-21dev {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 12px 35px -10px rgba(37, 99, 235, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid #E2E8F0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-21dev:hover {
+  box-shadow: 0 22px 45px -12px rgba(37, 99, 235, 0.18), inset 0 1px 0 0 rgba(255, 255, 255, 1);
+  border-color: #2563EB;
 }
 
 /* Custom Shadows & Glows */
 .shadow-premium-xl {
-  box-shadow: 0 25px 50px -12px rgba(5, 53, 230, 0.18), 0 0 20px rgba(0, 196, 255, 0.08);
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.18), 0 0 20px rgba(16, 185, 129, 0.08);
 }
 
 .shadow-lime-glow {
-  box-shadow: 0 10px 30px -4px rgba(116, 219, 36, 0.45), 0 0 15px rgba(116, 219, 36, 0.2);
+  box-shadow: 0 10px 30px -4px rgba(16, 185, 129, 0.45), 0 0 15px rgba(16, 185, 129, 0.2);
 }
 
 .shadow-cyan-glow {
@@ -96,6 +150,27 @@ body {
 
 .shadow-brand-glow {
   box-shadow: 0 15px 35px -5px rgba(5, 53, 230, 0.35);
+}
+
+/* 3D Perspective & Spatial Layering Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+
+.translate-z-30 {
+  transform: translateZ(30px);
 }
 
 /* Custom Scrollbar */
@@ -116,3 +191,5 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #74db24;
 }
+
+
